@@ -64,7 +64,7 @@ exports.addCourse = asyncHandler(async (req, res, next) => {
     return next(
       new ErrorResponse(
         `User ${req.user.id} is not authorized to add a course to bootcamp ${bootcamp._id}`,
-        403
+        401
       )
     );
   }
@@ -95,7 +95,7 @@ exports.updateCourse = asyncHandler(async (req, res, next) => {
     return next(
       new ErrorResponse(
         `User ${req.user.id} is not authorized to update course ${course._id}`,
-        403
+        401
       )
     );
   }
@@ -129,7 +129,7 @@ exports.deleteCourse = asyncHandler(async (req, res, next) => {
     return next(
       new ErrorResponse(
         `User ${req.user.id} is not authorized to delete course ${course._id}`,
-        403
+        401
       )
     );
   }
