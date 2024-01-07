@@ -153,7 +153,7 @@ exports.bootcampPhotoUpload = asyncHandler(async (req, res, next) => {
     return next(
       new ErrorResponse(
         `User ${req.user.id} is not authorized to update this bootcamp`,
-        403
+        401
       )
     );
   }
